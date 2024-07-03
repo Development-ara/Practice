@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  .card2 {
+    background-color: #f0f0f0;
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .card2-image {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card2-content {
+    text-align: center;
+
+    padding: 10px;
+    height: 30%;
+  }
+  .card2 h2 {
+    font-size: 24px;
+    margin: 10px 0 5px;
+  }
+  .card2 p {
+    font-size: 20px;
+  }
