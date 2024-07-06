@@ -11,7 +11,7 @@ var resultDiv = document.getElementById('output')
 
  function ClickHandler(){
     var inputText = textInput.value;
-    fetch("https://api.funtranslations.com/translate/navi.json" + "?" + "text=" + inputText)
+    fetch("https://api.funtranslations.com/translate/groot.json" + "?" + "text=" + inputText)
     .then(response => response.json())
     .then(json =>{
         var translatedText = json.contents.translated 
