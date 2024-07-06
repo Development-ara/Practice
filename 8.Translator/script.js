@@ -1,7 +1,21 @@
-var btnTranslate = document.getElementById('btn-translate')
+var btnTranslate =  document.getElementById('btn-translate')
+var textInput = document.getElementById('txt-input')
+var resultDiv = document.getElementById('output')
 
-console.log(btnTranslate);
+ function ClickHandler(){
+     console.log("clicked");
+     var userInput = textInput.value;
+     resultDiv.innerHTML = userInput;
+ }
+ btnTranslate.addEventListener("click", ClickHandler)
 
-btnTranslate.addEventListener("click",function(){
-console.log("clicked");
-})
+ function ClickHandler(){
+    var inputText = textInput.value;
+    fetch("https://api.funtranslations.com/translate/navi.json" + "?" + "text=" + inputText)
+    .then(response => response.json())
+    .then(json =>{
+        var translatedText = json.contents.translated 
+        resultDiv.innerText = translatedText
+    })
+    // .catch(errorHandeler)
+ }
